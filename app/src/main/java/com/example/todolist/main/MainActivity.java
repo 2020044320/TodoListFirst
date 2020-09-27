@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 
 import com.example.todolist.R;
 import com.example.todolist.addEdit.AddEditActivity;
@@ -37,10 +38,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent addIntent = new Intent(MainActivity.this, AddEditActivity.class);
+                addIntent.putExtra("id",0);
+                addIntent.putExtra("mode",0);
                 startActivity(addIntent);
             }
         });
-
     }
 
     @Override
