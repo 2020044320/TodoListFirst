@@ -70,7 +70,7 @@ public class AddEditActivity extends AppCompatActivity {
             }else{
                 MyDatabase myDatabase = MyDatabase.getInstance(AddEditActivity.this);
                 try {
-                    selectItem = myDatabase.todoDao().getTodo(//id가져오기);
+                    selectItem = myDatabase.todoDao().getTodo(id);
                 }catch(Exception e){
                     e.printStackTrace();
                 }
@@ -160,7 +160,7 @@ public class AddEditActivity extends AppCompatActivity {
 
                         if(mode==0){
                             //추가
-                            TodoItem todoItem = =new TodoItem(title, sDate,dDate,memo);
+                            TodoItem todoItem = new TodoItem(title, sDate,dDate,memo);
                             myDatabase.todoDao().insertTodo(todoItem);
                         }else if(mode==1){
                             //수정
